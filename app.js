@@ -177,9 +177,9 @@ class GolfApp {
 
     setDefaultWeather() {
         this.currentWeather = {
-            windSpeed: 5,
-            windDirection: 'SW',
-            temperature: 72
+            windSpeed: 7,
+            windDirection: 'W',
+            temperature: 68
         };
         this.updateWeatherDisplay();
     }
