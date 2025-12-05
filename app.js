@@ -34,6 +34,7 @@ class GolfApp {
         // Load saved distances if they exist
         if (this.savedClubs) {
             this.loadClubDistances();
+            this.updateCalculatorTab();
         }
     }
 
