@@ -136,21 +136,8 @@ class GolfApp {
         });
     }
 
-    async initializeWeather() {
-        try {
-            // Try to get user's location
-            if ('geolocation' in navigator) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => this.fetchWeatherData(position.coords.latitude, position.coords.longitude),
-                    (error) => this.handleLocationError(error)
-                );
-            } else {
-                this.setDefaultWeather();
-            }
-        } catch (error) {
-            console.error('Weather initialization failed:', error);
-            this.setDefaultWeather();
-        }
+    initializeWeather() {
+        this.setDefaultWeather();
     }
 
     async fetchWeatherData(lat, lon) {
